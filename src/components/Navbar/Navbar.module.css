@@ -101,7 +101,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
   }
   
   .btnSecondary {
@@ -147,12 +147,12 @@
   }
   
   .logoImg {
-    width: 140px !important;
+    width: 110px !important;
     height: auto !important;
   }
   
   .btnPrimary {
-    padding: 0.4rem 1rem;
-    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
   }
 }
