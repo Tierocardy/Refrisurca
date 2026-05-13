@@ -1,0 +1,158 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--foreground);
+  opacity: 0.8;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.navLinks a:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.ctaContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btnSecondary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--foreground);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--card-border);
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+  background: var(--card-bg);
+}
+
+.btnPrimary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--primary);
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px rgba(0, 180, 216, 0.4);
+}
+
+.btnPrimary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--foreground);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger svg {
+  width: 28px;
+  height: 28px;
+}
+
+.logoImg {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem 1rem;
+  }
+  
+  .btnSecondary {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 17, 40, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 2rem;
+    border-bottom: 1px solid var(--glass-border);
+    transform: translateY(-150%);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  
+  .mobileMenuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .navLinks a {
+    font-size: 1.25rem;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .logoImg {
+    width: 140px !important;
+    height: auto !important;
+  }
+  
+  .btnPrimary {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+}

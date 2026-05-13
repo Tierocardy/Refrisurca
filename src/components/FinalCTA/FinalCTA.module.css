@@ -1,0 +1,111 @@
+.ctaSection {
+  padding: 6rem 2rem;
+  background: var(--primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.paymentInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(10, 17, 40, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.iconWrapper {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper svg {
+  width: 24px;
+  height: 24px;
+  color: #fff;
+}
+
+.paymentInfo div {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #25D366;
+  color: #fff;
+  padding: 1.25rem 3rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsappBtn svg {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsappBtn:hover {
+  background-color: #1ebe57;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 768px) {
+  .paymentInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+}
